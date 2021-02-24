@@ -141,11 +141,13 @@ int main(){
 		}
 		else{
 			printf("Senha INCORRETA!!!");
+
 		}
 	}
 	fclose(arq);
-
-
+	printf("Senha no banco: %s",bancoSenha);
+	printf("Senha informada: %s",senhaUsuario.palavraCriptografada);
+	printf("As senhas estão criptografadas");
 	//é uma aplicação simples mas da pra ter uma noção de arvore red-black
 	//e contextualizar o conteudo visto em aula
 	return 0;
