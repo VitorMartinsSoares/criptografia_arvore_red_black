@@ -5,33 +5,33 @@
 #include <string.h>
 #include <stdbool.h>
 typedef struct Criptografia{
-  char *palavraReal;
-  char *palavraCriptografada;
+    char *palavraReal;
+    char *palavraCriptografada;
 }Criptografia;
 
-typedef struct tree_node {
-  Criptografia data;
-  struct tree_node *right;
-  struct tree_node *left;
-  struct tree_node *parent;
-  bool color;
-}tree_node;
+typedef struct no_arvore{
+    Criptografia data;
+    struct no_arvore*right;
+    struct no_arvore*left;
+    struct no_arvore*parent;
+    bool color;
+}no_arvore;
 
-typedef struct red_black_tree {
-  tree_node *root;
-  tree_node *NIL;
-}red_black_tree;
+typedef struct arvore_vermelho_preto{
+    no_arvore*root;
+    no_arvore*NIL;
+}arvore_vermelho_preto;
 
-tree_node* new_tree_node(Criptografia data);
-red_black_tree* new_red_black_tree();
-void left_rotate(red_black_tree *t, tree_node *x);
-void right_rotate(red_black_tree *t, tree_node *x);
-void insertion_fixup(red_black_tree *t, tree_node *z);
-void insert(red_black_tree *t, tree_node *z);
-void rb_transplant(red_black_tree *t, tree_node *u, tree_node *v);
-tree_node* minimum(red_black_tree *t, tree_node *x);
-void rb_delete_fixup(red_black_tree *t, tree_node *x);
-void rb_delete(red_black_tree *t, tree_node *z);
-void inorder(red_black_tree *t, tree_node *n);
+no_arvore* new_no_arvore(Criptografia data);
+arvore_vermelho_preto* new_arvore_vermelho_preto();
+void left_rotate(arvore_vermelho_preto*t, no_arvore*x);
+void right_rotate(arvore_vermelho_preto*t, no_arvore*x);
+void insertion_fixup(arvore_vermelho_preto*t, no_arvore*z);
+void insert(arvore_vermelho_preto*t, no_arvore*z);
+void rb_transplant(arvore_vermelho_preto*t, no_arvore*u, no_arvore*v);
+no_arvore* minimum(arvore_vermelho_preto*t, no_arvore*x);
+void rb_delete_fixup(arvore_vermelho_preto*t, no_arvore*x);
+void rb_delete(arvore_vermelho_preto*t, no_arvore*z);
+void inorder(arvore_vermelho_preto*t, no_arvore*n);
 
 #endif

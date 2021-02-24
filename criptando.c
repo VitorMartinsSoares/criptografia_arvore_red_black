@@ -22,7 +22,7 @@ int main(){
 
 	//declaração de variaveis para o código
 	int i = 0;
-	red_black_tree *t = new_red_black_tree();
+	arvore_vermelho_preto*t = new_arvore_vermelho_preto();
 	FILE *file;
 	char line[100];
 	int intencao;
@@ -31,8 +31,8 @@ int main(){
 	int cont = 0;
 	FILE *arq;
 	Criptografia senhaUsuario;
-	tree_node *noSenha;
-	tree_node *noArvore;
+	no_arvore*noSenha;
+	no_arvore*noArvore;
 	//abrindo o arquivo do banco de palavras para popular a arvore
 	if ((file = fopen("arquivos/palavras.txt", "r")) == NULL)	{
 		printf("Error! opening file");
@@ -46,7 +46,7 @@ int main(){
 		Criptografia crip;
 		crip.palavraReal = strdup(strtok(line, "\n"));
 		crip.palavraCriptografada = strtok(line, "\n");
-		noArvore = new_tree_node(crip);
+		noArvore = new_no_arvore(crip);
 		insert(t, noArvore);
 	}
 	fclose(file);
@@ -73,7 +73,7 @@ int main(){
 
 		senhaUsuario.palavraReal = strdup(senha);
 		senhaUsuario.palavraCriptografada = senha;
-		noSenha = new_tree_node(senhaUsuario);
+		noSenha = new_no_arvore(senhaUsuario);
 		insert(t, noSenha);
 		
 		strlwr(usuario);
@@ -134,7 +134,7 @@ int main(){
 		printf("%s  %s\n", bancoUsuario, bancoSenha);
 		senhaUsuario.palavraReal = strdup(senha);
 		senhaUsuario.palavraCriptografada = senha;
-		noSenha = new_tree_node(senhaUsuario);
+		noSenha = new_no_arvore(senhaUsuario);
 		insert(t, noSenha);
 		if (strcmp(senhaUsuario.palavraCriptografada, bancoSenha) == 0){
 			printf("Senha CORRETA! Usuario logado!");

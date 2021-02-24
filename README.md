@@ -71,3 +71,10 @@ Abaixo esta o inicio deste programa, como a arvore é manipulada nos 10 primeiro
 
 ## Conclusão <h2>
 Existe melhores maneiras de se criar uma criptografia, pois com esta arvore fica impossivel de armazenar as novas senhas na arvore porque a criptografia mudaria caso a arvore precisasse ser balanceada, e isso gera um limite e um padrão, além de que duas senha diferentes de mesmo tamanho, existe uma chance muito pequena, quase nula, de repetir. A arvore tem melhores aplicações, porém foi uma experiência extremamente satisfatoria, é possivel ver que todas as criptografias tem um valor de complexidade alto para ser eficiente. O código deste projeto contém algumas explicações e direção do que foi feito como comentários.O tempo de execução testado nesta aplicação foi tão pequeno que foi muito dificil de perceber ate mesmo calculando e mostrando na tela, o que mostra também a efetividade do código.
+
+## Referencias <h2>
+<a href="https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844/ref=sr_1_1?dchild=1&keywords=Introduction+to+Algorithms&qid=1613858932&sr=8-1">Thomas H. Cormen: Introduction to Algorithms, 3rd Edition (The MIT Press)</a><br/>
+<a href="https://www.codesdope.com/course/data-structures-red-black-trees/">CodesDope: Red-Black Trees</a><br/>
+<a href="https://www.dicio.com.br/lista-de-palavras/">Dicio: lista de palavras</a><br/>
+<a href="https://www.baeldung.com/cs/red-black-trees/">Baeldung: Introduction to Red-Black Trees </a><br/>
+<a href="https://www.cs.usfca.edu/~galles/visualization/RedBlack.html">Red-Black tree algorithm Visualizations</a><br/>
