@@ -69,14 +69,12 @@ int main(){
 		signup();
 		scanf("%s", &usuario);
 		scanf("%s", &senha);
-		strlwr(senha);
 
 		senhaUsuario.palavraReal = strdup(senha);
 		senhaUsuario.palavraCriptografada = senha;
 		noSenha = new_no_arvore(senhaUsuario);
 		insert(t, noSenha);
 		
-		strlwr(usuario);
 		strcat(usuario, ",");
 		strcat(usuario, senhaUsuario.palavraCriptografada);
 		strcat(usuario, "\n");
@@ -91,8 +89,6 @@ int main(){
 		signin();
 		scanf("%s", &usuario);
 		scanf("%s", &senha);
-		strlwr(usuario);
-		strlwr(senha);
 		if ((arq = fopen("banco.txt", "r")) == NULL){
 			printf("Error! opening file");
 			exit(1);
@@ -145,9 +141,7 @@ int main(){
 		}
 	}
 	fclose(arq);
-	printf("Senha no banco: %s",bancoSenha);
-	printf("Senha informada: %s",senhaUsuario.palavraCriptografada);
-	printf("As senhas estão criptografadas");
+	printf("Senha informada criptografada: %s\n",senhaUsuario.palavraCriptografada);
 	//é uma aplicação simples mas da pra ter uma noção de arvore red-black
 	//e contextualizar o conteudo visto em aula
 	return 0;
